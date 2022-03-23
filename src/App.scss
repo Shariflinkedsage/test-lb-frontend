@@ -1,0 +1,802 @@
+/* The following line can be included in a src/App.scss */
+
+@import "custom";
+
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Toastify__toast--default{
+  color: #888 !important;
+}
+// copied from loaner bazar
+
+// header {
+//   background: #0b4376;
+// }
+
+// .top-nav .bb-navbar-nav > li > a:after {
+//   border-right: 1px solid #fda71e;
+//   border-bottom: 1px solid #fda71e;
+// }
+
+// .logo-border:after {
+//   border-right: 1px solid #fda71e;
+// }
+
+// .trust-icons {
+//   background-color: #0b4376;
+// }
+
+// .bb-products a.bbicons-cs {
+//   // background-image: url(./images/cs.jpg);
+//   background-position: center 8px;
+// }
+
+// .gateway-ct-btn {
+//   background-color: #fca81a;
+// }
+
+// .gateway-ct-img {
+//   background-image: url(./images/why.png) !important;
+// }
+// .bb-investors .bbicons-amazon {
+//   background-position: -8px -2px;
+//   width: 160px;
+//   height: 34px;
+//   margin-left: 16px;
+// }
+
+// .bb-investors .sprite-bb-patners {
+//   vertical-align: middle;
+//   margin: 0 10px 0 10px;
+//   display: inline-block;
+//   height: 40px;
+//   background-image: url(./images/logo_linkedsage.png);
+//   background-repeat: no-repeat;
+// }
+
+// .dontshow {
+//   display: none;
+// }
+
+// .preLoad-Image {
+//   height: 0;
+//   overflow: hidden;
+//   font-size: 0;
+//   line-height: 0;
+// }
+
+// .hungry-for-more {
+//   padding: 0 10px;
+// }
+
+// @media (max-width: 767px) {
+//   .breadcrumb-section {
+//     display: none;
+//   }
+// }
+
+// .link-list li {
+//   padding-top: 3px;
+//   padding-bottom: 3px;
+// }
+
+// .mobile .offers-page .zopim {
+//   display: none !important;
+// }
+
+// .bb-home-page .bb-product-search,
+// .bb-home-page .welcome-greet {
+//   display: none;
+// }
+
+// .bb-home-page-mobile.modal-open #webklipper-publisher-widget-container {
+//   display: none;
+// }
+
+// .bb-banner {
+//   /*background-image: url(images/gateway-banner-cs-animated-gray-bg-desktop-v4.gif);*/
+//   background-image: url("./images/banner.jpg");
+//   background-position: center center !important;
+// }
+
+// .credit-score-gateway-widget p {
+//   padding-bottom: 20px;
+// }
+
+// @media (min-width: 1500px) {
+//   .ten-10a-ten {
+//     width: 570px !important;
+//   }
+// }
+
+// .credit-score-gateway-widget {
+//   right: 30px;
+//   color: #34495d;
+// }
+
+// @media (min-width: 1400px) {
+//   .bb-banner {
+//     /*background-image: url(images/gateway-banner-cs-animated-gray-bg-lg-desktop-v4.gif);*/
+//     background-image: url("./images/banner.jpg");
+//     background-position: center top !important;
+//   }
+// }
+
+// @media (max-width: 1024px) {
+//   .bb-banner {
+//     height: 350px !important;
+//   }
+
+//   .credit-score-gateway-widget {
+//     right: 60px;
+//   }
+
+//   .credit-score-gateway-widget p {
+//     font-size: 20px;
+//   }
+
+//   .credit-score-gateway-widget span {
+//     font-size: 14px;
+//   }
+
+//   .ten-10a-ten {
+//     display: none !important;
+//   }
+// }
+
+// @media (max-width: 1023px) {
+//   .bb-banner {
+//     /*background-image: url("./images/gateway-banner-cs-animated-gray-bg-tablet-v4.gif");*/
+//     background-image: url("./images/banner.jpg");
+//     background-position: right top !important;
+//   }
+
+//   .ten-10a-ten {
+//     display: none !important;
+//   }
+
+//   .credit-score-gateway-widget {
+//     right: 10px;
+//     width: 465px;
+//   }
+
+//   .credit-score-gateway-widget p {
+//     font-size: 18px;
+//   }
+
+//   .credit-score-gateway-widget span {
+//     font-size: 14px;
+//     padding: 20px 65px;
+//     display: block;
+//     line-height: 0;
+//   }
+
+//   .credit-score-gateway-widget .ct-cta-btn {
+//     padding-left: 20px;
+//   }
+// }
+
+// .credit-score-gateway-widget .laurel-icon {
+//   width: 40px;
+//   margin-right: 10px;
+// }
+
+// .credit-score-gateway-widget span {
+//   padding-top: 10px;
+// }
+
+// .credit-score-gateway-widget .btn img {
+//   height: 12px;
+//   width: 12px;
+//   vertical-align: baseline;
+// }
+
+// .credit-score-gateway-widget .btn,
+// .credit-score-gateway-widget .btn:hover {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// @keyframes btn-ct-banner {
+//   from {
+//     margin-left: -20px;
+//   }
+
+//   to {
+//     margin-left: 1000px;
+//   }
+// }
+
+// @media screen and (max-width: 767px) {
+//   .bb-products a.bbicons-cs {
+//     // background-image: url("./images/cs.jpg");
+//     background-position: center 6px;
+//   }
+
+//   .bb-home-page-mobile .bb-products li {
+//     width: 33.3%;
+//   }
+// }
+
+// .bb-products a.bbicons-cs {
+//   background-image: url("./images/ct-icon-animation-desktop-v2.gif");
+//   background-position: center 8px;
+// }
+
+// .primary-txt .link-cta-btn.link-cta-btn-1,
+// .product-section .primary-txt .link-cta-btn.link-cta-btn-1 {
+//   border: 2px solid #34495e;
+//   font-weight: normal;
+//   margin: 0;
+// }
+
+// .link-cta-btn .left-box,
+// .link-cta-btn .right-box {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+
+// .link-cta-btn .left-box {
+//   text-align: right;
+//   color: #fff;
+// }
+
+// .link-cta-btn .right-box {
+//   min-width: 160px;
+// }
+
+// .link-cta-btn strong {
+//   color: #fff;
+// }
+
+// .primary-txt .link-cta-btn-1.bg-pickled-blue {
+//   background-color: #34495e;
+// }
+
+// .primary-txt .txt-buttercup {
+//   color: #f1c40f;
+// }
+
+// .primary-txt .link-cta-btn.link-cta-btn-1 a {
+//   position: relative;
+//   overflow: hidden;
+//   display: block;
+// }
+
+// .link-cta-btn-1 {
+//   display: table;
+// }
+
+// .link-cta-btn-1 .btn-animation-type-1 a:after {
+//   content: "";
+//   width: 45px;
+//   height: 100px;
+//   position: absolute;
+//   left: 0;
+//   top: -10px;
+//   transform: rotate(-20deg);
+//   background: -moz-linear-gradient(
+//     right,
+//     rgba(255, 255, 255, 0) 0%,
+//     rgba(255, 255, 255, 0) 1%,
+//     rgba(255, 255, 255, 0.5) 50%,
+//     rgba(255, 255, 255, 0) 100%
+//   );
+//   background: -webkit-linear-gradient(
+//     right,
+//     rgba(255, 255, 255, 0) 0%,
+//     rgba(255, 255, 255, 0) 1%,
+//     rgba(255, 255, 255, 0.5) 50%,
+//     rgba(255, 255, 255, 0) 100%
+//   );
+//   background: linear-gradient(
+//     to right,
+//     rgba(255, 255, 255, 0) 0%,
+//     rgba(255, 255, 255, 0) 1%,
+//     rgba(255, 255, 255, 0.5) 50%,
+//     rgba(255, 255, 255, 0) 100%
+//   );
+//   -webkit-animation: btn-slide infinite 2s linear;
+//   animation: btn-slide infinite 2s linear;
+// }
+
+// @keyframes btn-slide {
+//   from {
+//     margin-left: -20px;
+//   }
+
+//   to {
+//     margin-left: 250px;
+//   }
+// }
+
+// .loan-rate-summary {
+//   font-weight: normal;
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .cta-section.cta-section-1 {
+//     display: block;
+//     width: 100%;
+//   }
+
+//   .link-cta-btn .left-box {
+//     width: 100%;
+//   }
+
+//   .primary-txt .link-cta-btn.link-cta-btn-1 a {
+//     margin: 0 0 0 10px;
+//     font-size: 14px;
+//   }
+
+//   .bb-new-footer .footer-common-link a {
+//     display: inline-block;
+//     margin: 6px;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .bb-new-footer .footer-common-link a {
+//     display: inline-block;
+//     margin: 6px !important;
+//   }
+// }
+
+// @media only screen and (max-width: 320px) {
+//   .link-cta-btn .right-box {
+//     min-width: 148px;
+//   }
+
+//   .primary-txt .link-cta-btn.link-cta-btn-1 a {
+//     margin: 0 0 0 6px;
+//     padding: 7px 2px;
+//   }
+
+//   .product-section .primary-txt .link-cta-btn.link-cta-btn-1,
+//   .primary-txt .link-cta-btn.link-cta-btn-1 {
+//     padding: 6px 4px;
+//   }
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .ultra-lw-offer .banks-section .offers-name a {
+//     color: #354962;
+//   }
+
+//   .offer a.value-title {
+//     color: #34495e;
+//     font-size: 12px;
+//   }
+
+//   .banks-section .pre-qualified {
+//     background: #eb9530;
+//     color: #fff;
+//     padding: 6px;
+//     font-size: 10px;
+//     border-radius: 2px;
+//   }
+
+//   .ifsc-code .product-section .product-logo {
+//     width: auto;
+//     max-width: 100%;
+//   }
+// }
+
+// .offers-section .fee-group-landing-desktop .two-column-title,
+// .offers-section .fee-group-offer-desktop .two-column-title {
+//   display: none;
+// }
+
+// .filter-section li.filter-investment-type {
+//   display: none;
+// }
+
+// .notification {
+//   z-index: 1051;
+// }
+
+// @media only screen and (min-width: 1360px) {
+//   .fd-landing .skyscraper-left,
+//   .fd-landing .skyscraper-right {
+//     width: calc((100% - 1090px) / 2 - 5px);
+//   }
+
+//   .fd-landing .product-section .container,
+//   .fd-landing .tab-content .container,
+//   .fd-landing .bank-prod-page .container {
+//     width: 1090px;
+//   }
+// }
+
+// @media only screen and (min-width: 1400px) {
+//   .fd-landing .product-section .container,
+//   .fd-landing .tab-content .container,
+//   .fd-landing .bank-prod-page .container {
+//     width: 1110px;
+//   }
+
+//   .fd-landing .skyscraper-left,
+//   .fd-landing .skyscraper-right {
+//     width: calc((100% - 1120px) / 2 - 10px);
+//   }
+// }
+
+// .bbicons-menu-homeloans {
+//   background-position: -15px -1474px !important;
+// }
+
+// .bbicons-menu-loans,
+// .bbicons-menu-personalloans,
+// .bbicons-menu-otherloans {
+//   background-position: -15px -357px !important;
+// }
+
+// .bbicons-menu-financeTools,
+// .bbicons-menu-calculators {
+//   background-position: -15px -162px !important;
+// }
+
+// .pre-approved {
+//   width: auto;
+// }
+
+// .bb-home-page-mobile .trending-products a,
+// .bb-home-page-mobile .trending-products a:hover {
+//   color: #006a9e;
+// }
+
+// .gateway-trending-product .card-title {
+//   color: #006a9e;
+// }
+
+// @media screen and (max-width: 767px) {
+//   .gateway-ct-section {
+//     overflow: hidden;
+//   }
+// }
+
+// @media screen and (max-width: 375px) {
+//   .gateway-ct-section .lockdown-mob-img {
+//     margin-left: -25px;
+//     height: 56px;
+//   }
+// }
+
+// @media screen and (max-width: 359px) {
+//   .gateway-ct-section .lockdown-mob-img {
+//     margin-left: inherit !important;
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+
+// .modal.oneTapLoginModal {
+//   background-color: rgba(52, 73, 94, 0.9);
+// }
+
+// .modal.oneTapLoginModal .modal-body img {
+//   width: auto;
+//   margin-top: 10%;
+// }
+
+// .modal.oneTapLoginModal .sign-in-info {
+//   background-image: url("./images/one_tap_login_desktop_new_v6.gif");
+//   display: block;
+//   height: 361px;
+//   width: 610px;
+//   background-repeat: no-repeat;
+//   left: -127px;
+//   position: relative;
+// }
+
+// @media (min-width: 1500px) {
+//   .modal.oneTapLoginModal .modal-body .sign-in-info {
+//     margin-left: 30%;
+//   }
+// }
+
+// @media only screen and (min-width: 1270px) {
+//   .modal.oneTapLoginModal .modal-dialog {
+//     width: 512px;
+//     margin: 30px auto;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1024px) {
+//   .modal.oneTapLoginModal .modal-body .sign-in-info {
+//     width: 250px;
+//     background-size: 100%;
+//   }
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .modal.oneTapLoginModal .modal-body .sign-in-info {
+//     margin: 50% auto 0;
+//     left: auto;
+//   }
+
+//   .modal.oneTapLoginModal .sign-in-info {
+//     background-image: url("./images/one_tap_login_mobile_new_v8.gif");
+//     height: 252px;
+//     width: 317px;
+//   }
+
+//   .iphone .modal.oneTapLoginModal .modal-body .sign-in-info {
+//     margin: 35% auto 0;
+//   }
+// }
+
+// @media only screen and (max-width: 320px) {
+//   .modal.oneTapLoginModal .modal-body .sign-in-info {
+//     margin-top: 30%;
+//     margin-left: -20px;
+//   }
+// }
+
+// .lockdown-badge {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   background-color: #ffffff;
+//   border-bottom: 1px solid #e0eaf6;
+//   text-align: center;
+//   z-index: 1;
+//   font-size: 12px;
+//   padding: 6px 0;
+//   cursor: default;
+// }
+
+// .lockdown-badge a {
+//   color: #34495e;
+//   padding: 6px 0;
+//   display: block;
+// }
+
+// .lockdown-badge strong {
+//   text-decoration: underline;
+// }
+
+// .notification-modal {
+//   z-index: 1051;
+// }
+
+// .notification {
+//   background-color: #e4e4e4;
+//   border-radius: 6px;
+//   width: 300px;
+//   overflow: hidden;
+//   border: 1px solid #cccccc;
+//   position: absolute;
+//   left: 15px;
+//   top: 15px;
+// }
+
+// .notification-content {
+//   display: table;
+//   padding: 20px;
+// }
+
+// .notification span {
+//   display: table-cell;
+//   vertical-align: top;
+//   padding-right: 15px;
+// }
+
+// .notification .notification-cta a {
+//   width: 50%;
+//   float: left;
+//   text-align: center;
+//   padding: 10px 0;
+//   background-color: #ffffff;
+//   text-decoration: none;
+//   color: #34495e;
+// }
+
+// .notification .notification-cta .subscribe {
+//   background-color: #176a9e;
+//   color: #ffffff;
+//   position: relative;
+// }
+
+// .notification .notification-cta .subscribe:after {
+//   background-image: url("./images/bbicons_subscribe.png");
+//   content: "";
+//   position: absolute;
+//   width: 13px;
+//   height: 16px;
+//   background-position: 0 0;
+//   left: 21px;
+//   top: 11px;
+// }
+
+// @media (max-width: 767px) {
+//   .notification-modal {
+//     background: rgba(52, 73, 94, 0.7);
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//   }
+
+//   .notification {
+//     background-color: #e4e4e4;
+//     border-radius: 6px;
+//     width: 284px;
+//     overflow: hidden;
+//     border: 1px solid #cccccc;
+//     top: 30%;
+//     margin: 0 auto;
+//     position: relative;
+//     left: 0;
+//   }
+
+//   .notification .notification-cta {
+//     overflow: hidden;
+//     padding: 0 20px 20px 20px;
+//   }
+
+//   .notification .notification-cta a {
+//     width: auto;
+//     float: left;
+//     text-align: center;
+//     padding: 10px;
+//     background-color: #ffffff;
+//     text-decoration: none;
+//     color: #34495e;
+//     border-radius: 6px;
+//   }
+
+//   .notification .notification-cta .subscribe {
+//     background-color: #176a9e;
+//     color: #ffffff;
+//     position: relative;
+//     padding-left: 39px;
+//     padding-right: 20px;
+//     float: right;
+//   }
+// }
+
+// .primary-txt .table.table-curved {
+//   margin: 10px auto;
+// }
+// .primary-txt .table-curved {
+//   background: #f4f5f7;
+//   text-align: center;
+//   border-collapse: separate;
+//   border-width: 0 1px 1px;
+//   border-style: none solid solid;
+//   border-color: #ddd;
+//   border-radius: 0 0 6px 6px;
+// }
+
+// .table.table-curved {
+//   background: #fff;
+// }
+// .primary-txt table {
+//   margin: 10px 0;
+// }
+// table {
+//   width: 100%;
+//   border-spacing: 0;
+//   border-collapse: collapse;
+// }
+// * {
+//   box-sizing: border-box;
+// }
+// .primary-txt .table-curved > thead > tr > th,
+// .primary-txt .table-curved > tbody > tr > th,
+// .table-curved > tfoot > tr > th,
+// .primary-txt .table-curved > thead > tr > td,
+// .primary-txt .table-curved > tbody > tr > td,
+// .primary-txt .table-curved > tfoot > tr > td {
+//   border-top: 1px solid #ddd;
+//   padding: 9px 15px;
+//   text-align: left;
+//   vertical-align: middle;
+// }
+
+// .alert-danger {
+//   color: #721c24;
+//   background-color: #f8d7da;
+//   border-color: #f5c6cb;
+// }
+
+// .alert {
+//   position: relative;
+//   padding: 0.75rem 1.25rem;
+//   margin-bottom: 1rem;
+//   border: 1px solid transparent;
+//   border-radius: 0.25rem;
+// }
+
+// .product-block {
+//   background-color: #fff;
+//   border-radius: 5px;
+//   border: 1px solid #fda71e;
+//   padding: 10px;
+//   margin-bottom: 20px;
+// }
+
+// .white {
+//   border: 1px solid #84bd5a;
+//   background-color: white;
+//   color: #000;
+// }
+
+// .green {
+//   margin-top: 20px;
+//   color: #fff;
+//   background-color: #59b210;
+// }
+
+// .light-green {
+//   margin-top: 20px;
+//   background-color: #8cc63e;
+//   color: #fff;
+// }
+
+// .btn-product {
+//   padding: 10px 5px !important;
+//   max-width: 150px !important;
+//   min-width: 150px !important;
+// }
+// .product-block .loan-title,
+// .product-block .title-block {
+//   color: #000;
+// }
+// .product-block .title-block {
+//   padding: 10px;
+//   border-bottom: 1px dashed #dee2e6;
+// }
+// .product-block .info-block {
+//   padding: 10px;
+//   margin-top: 10px;
+//   border-right: 1px dashed #dee2e6;
+// }
+// .product-block .last-block {
+//   margin-top: 10px;
+//   padding: 10px;
+// }

@@ -1,0 +1,183 @@
+$medium: 991px;
+.Container {
+  // margin-top: 60px;
+  padding: 0px !important;
+  //
+
+  &_Bgimg {
+    //.................................... background image design css.............................
+    background-image:
+    // background: linear-gradient(rgba(24, 21, 21, 0.2), rgba(119, 104, 104, 0.2)),
+      url("../../images/banner.jpg");
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 35vh;
+    width: 100%;
+    @media screen and (max-width: $medium) {
+      background-image: none;
+      text-align: justify;
+      // min-height: 0px;
+    }
+  }
+  &_creditScore {
+    width: 300px;
+    @media (max-width: 465px) {
+      width: 250px;
+    }
+  }
+  &_loanerbazar {
+    max-width: 350px;
+    height: 400px;
+    @media (max-width: 500px) {
+      width: 300px;
+      height: 300px;
+    }
+    &_text {
+      padding-top: 70px;
+      @media (max-width: 1160px) {
+        padding-left: 40px;
+      }
+      @media (max-width: 900px) {
+        margin-top: 20px;
+        padding-top: 0px;
+      }
+      @media (max-width: 500px) {
+        padding-left: 20px;
+      }
+    }
+  }
+  &_cardContainer {
+    overflow: hidden;
+
+    &_creditCardImage {
+      transition: all 0.5s;
+      
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+        overflow: hidden;
+      }
+    }
+    
+  }
+  &_creditCardImage {
+    overflow: hidden;
+    width: 260px;
+    height: 160px;
+    &:hover {
+      // transform: scale(1.2);
+      width: 300px;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+  }
+
+  &_Bottom_Border_List {
+    align-content: center;
+    align-items: center;
+    background-color: rgb(11, 67, 118);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0px;
+    min-height: 60px;
+    padding-left: 0px;
+    @media screen and (max-width: 874px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding-left: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    li {
+      color: white;
+      list-style: none;
+      padding: 0px 12px;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 874px) {
+        padding: 5px 0px;
+      }
+    }
+  }
+
+  &_Laurel_Icon {
+    margin-right: 10px;
+  }
+
+  &_Bottom_Border_Icon {
+    margin-right: 3px;
+  }
+  &_free_credit_container {
+    margin-left: 25px;
+    @media screen and (max-width: 874px) {
+      margin: 0px 5px;
+    }
+    @media screen and (max-width: 500px) {
+      margin: 0;
+    }
+    &_banner {
+      margin-top: 25px;
+      margin-left: 3px;
+      width: 70%;
+      padding: 10px;
+      text-align: center;
+      background-color: rgb(255, 90, 95);
+      border-radius: 5px;
+      @media screen and (max-width: 874px) {
+        padding: 5px 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  // &_free_credit_banner {
+  //   margin-top: 25px;
+  //   margin-left: 3px;
+  //   width: 70%;
+  //   padding: 10px;
+  //   text-align: center;
+  //   background-color: rgb(255, 90, 95);
+  //   border-radius: 5px;
+  // }
+  &_why_loaner_bazar {
+    // ...................................... why loaner bazar section..................................
+    // background-image:
+    // background: linear-gradient(rgba(24, 21, 21, 0.2), rgba(119, 104, 104, 0.2))
+    // url("../../images/why_bank_bazar.png");
+    // color: rgb(56, 172, 201);
+    background-repeat: no-repeat;
+    // background-size: stretch;
+    background-position: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    @media screen and (max-width: 500px) {
+      background-image: none;
+      min-height: 0px;
+      // max-height: 600px;
+      display: none;
+    }
+    &_background {
+      padding-top: 20px;
+      margin: 0px !important;
+      // background: linear-gradient(0deg, #3ab2ee 67%, #44c5ff 67%);
+      @media screen and (max-width: 500px) {
+        background-image: none;
+        min-height: 0px;
+        // max-height: 600px;
+        display: none;
+      }
+    }
+  }
+}
+.logolink {
+  margin-right: 40px;
+}

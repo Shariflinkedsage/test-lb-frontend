@@ -1,0 +1,142 @@
+.Container {
+  // background-image: url("../../images/cards/bd_signature_banner.jpg");
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 600px) {
+    // background-image: url("../../images/cards/visa_signature_cedit_card.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+  }
+  @media (max-width: 400px) {
+    // background-image: url("../../images/cards/visa_signature_cedit_card.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+  }
+  &_card {
+    background-color: rgba(226, 243, 233, 0.5);
+    width: 540px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    &_text {
+      justify-items: center;
+      text-align: center;
+    }
+    &_textp {
+      text-align: left;
+    }
+    &_button {
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.875em;
+      line-height: 1.4;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: 2px solid #008738;
+      background-color: #27cc6c;
+      padding: 1em 1.5em;
+      min-width: 100px;
+      white-space: nowrap;
+      justify-content: center;
+      display: flex;
+      &:hover {
+        color: #049942;
+        background-color: rgb(250, 255, 251);
+      }
+    }
+    @media (max-width: 1000px) {
+      max-width: 450px;
+    }
+    @media (max-width: 875px) {
+      max-width: 350px;
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  &_Content {
+    padding: 10px 10px 60px 10px;
+    &_Detail {
+      padding: 20px 10px 30px 10px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: justify;
+      font-family: Comfortaa, Arial;
+      font-size: 1.5rem;
+      line-height: 1.58333em;
+      font-weight: 300;
+      color: #3c3c3c;
+      margin-bottom: 0;
+    }
+  }
+  &_Accordion__Container {
+    max-width: 805px;
+    margin: 0 auto 50px auto;
+  }
+
+  &_Apply__Button {
+    border-radius: 5px;
+    padding: 9px 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s ease;
+    @keyframes glowing {
+      0% {
+        background-color: rgb(0, 142, 204);
+        box-shadow: 0 0 5px rgb(0, 142, 204);
+      }
+      30% {
+        background-color: rgb(26, 188, 156);
+        box-shadow: 0 0 5px rgb(26, 188, 156);
+      }
+      100% {
+        background-color: rgb(0, 142, 204);
+        box-shadow: 0 0 5px rgb(0, 142, 204);
+      }
+    }
+    animation: glowing 700ms infinite;
+    @media (max-width: 575px) {
+      width: 50%;
+      margin-top: 20px;
+      text-align: center;
+    }
+    &:hover {
+      background-color: rgb(11, 67, 118) !important;
+      color: white;
+    }
+  }
+}
+
+.button:hover {
+  color: #049942;
+  background-color: rgb(250, 255, 251);
+}
+.benefit_section{
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+.more_benefit_section{
+  @media (max-width: 575px) {
+    display: none;
+  }
+}

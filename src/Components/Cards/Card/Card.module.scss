@@ -1,0 +1,61 @@
+.container {
+  &_details_button {
+    cursor: pointer;
+    background-color: rgb(0, 142, 204);
+    color: white;
+    text-align: center !important;
+    // margin: 7px 60px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+    @media (max-width: 1399px) {
+      padding: 5px 0px;
+      width: 100px;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 80%;
+      padding: 7px 0px;
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+  }
+  &_details_show {
+    transition: all 5s ease;
+    display: block;
+  }
+  &_details_hide {
+    transition: all 5s ease;
+    display: none;
+  }
+  &_apply_button {
+    background-color: rgb(26, 188, 156);
+    color: white;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &:hover {
+      color: white;
+    }
+    @media (max-width: 1399px) {
+      padding: 5px 0px;
+      width: 100px;
+    }
+    @media (max-width: 1399px) {
+      padding: 5px 0px;
+      width: 100px;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 80%;
+      padding: 7px 0px;
+      font-size: 20px;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.container {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // padding: 20px;
+  &_referralheader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    &_titel {
+      font-weight: bold;
+      font-size: 40px;
+      margin: 10px;
+      @media (max-width: 300px) {
+        .titel {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 6px;
+
+    // &_total {
+    //   margin-right: 30px;
+    //   width: 225px;
+    //   height: 200px;
+    //   font-weight: bold;
+    //   font-size: 22px;
+    //   background-color: rgb(37, 185, 185);
+    //   color: white;
+    //   align-items: center;
+    //   justify-content: center;
+    //   box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    //   border-radius: 5px;
+    //   -webkit-border-radius: 8px;
+    //   -moz-border-radius: 8px;
+    // }
+    // &_active {
+    //   margin-right: 30px;
+    //   width: 225px;
+    //   height: 200px;
+    //   font-weight: bold;
+    //   font-size: 22px;
+    //   background-color: darkmagenta;
+    //   color: white;
+    //   align-items: center;
+    //   justify-content: center;
+    //   box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    //   border-radius: 5px;
+    //   -webkit-border-radius: 8px;
+    //   -moz-border-radius: 8px;
+    // }
+    // &_rejected {
+    //   margin-right: 30px;
+    //   width: 225px;
+    //   height: 200px;
+    //   font-weight: bold;
+    //   font-size: 22px;
+    //   background-color: rgb(235, 39, 39);
+    //   color: white;
+    //   align-items: center;
+    //   justify-content: center;
+    //   box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    //   border-radius: 5px;
+    //   -webkit-border-radius: 8px;
+    //   -moz-border-radius: 8px;
+    // }
+    // &_pending {
+    //   //   margin-right: 20px;
+    //   width: 225px;
+    //   height: 200px;
+    //   font-weight: bold;
+    //   font-size: 22px;
+    //   background-color: rgb(196, 196, 13);
+    //   color: white;
+    //   align-items: center;
+    //   justify-content: center;
+    //   box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    //   border-radius: 5px;
+    //   -webkit-border-radius: 8px;
+    //   -moz-border-radius: 8px;
+    // }
+  }
+  &_card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 22px;
+    // background-color: rgb(37, 185, 185);
+    color: white;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    border-radius: 5px;
+    &_total_referal {
+      background-color: rgb(37, 185, 185);
+    }
+    &_successful_referal {
+      background-color: rgba(0, 255, 0, 0.8);
+    }
+    &_reject_referal {
+      background-color: rgba(255, 0, 0, 0.6);
+    }
+    &_pendings_referal {
+      background-color: rgba(0, 0, 255, 0.6);
+    }
+  }
+}

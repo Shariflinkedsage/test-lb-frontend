@@ -1,0 +1,120 @@
+.Container {
+  // padding-top: 40px;
+  // padding-left: 40px;
+  // padding-right: 40px;
+  padding: 0px !important;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  background-color: rgb(66, 66, 66);
+  margin-bottom: 0px !important;
+
+  &_linkedIn_logo {
+    color: #34495e;
+    background-color: white;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  &_Learn_More {
+    background-color: rgb(52, 73, 94);
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0px !important;
+
+    li {
+      margin-left: 15px;
+      text-decoration: none;
+      list-style: none;
+      color: rgb(136, 136, 136);
+      cursor: pointer;
+      font-size: 14px;
+      a {
+        text-decoration: none;
+        color: rgb(136, 136, 136);
+        &:hover {
+          color: white;
+        }
+      }
+      &:hover {
+        color: white;
+      }
+      @media screen and (max-width: 500px) {
+        margin-left: 0px;
+      }
+    }
+    li:first-child {
+      color: #aaa9a9;
+      font-size: 12px;
+    }
+  }
+  &_Navigation {
+    color: white;
+    align-items: flex-start;
+    &_Nav {
+      padding: 0px !important;
+
+      &_Title {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      li,a {
+        list-style: none;
+        color: #979797;
+        text-decoration:none;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  &_Contact__Us {
+    color: rgb(136, 136, 136);
+    &_Title {
+      font-size: 14px;
+      padding: 0px !important;
+      margin-bottom: 2px;
+    }
+  }
+  &_Bottom_Navigattion {
+    li {
+      margin-left: 30px;
+      text-decoration: none;
+      list-style: none;
+      color: rgb(136, 136, 136);
+      cursor: pointer;
+      font-size: 14px;
+      @media screen and (max-width: 500px) {
+        margin: 0px;
+      }
+      a {
+        text-decoration: none;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  &_Copyright {
+    color: rgb(136, 136, 136);
+    &_policy {
+      a {
+        text-decoration: none;
+        // color: rgb(136, 136, 136);
+        color: white;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+  p {
+    text-align: center;
+  }
+}

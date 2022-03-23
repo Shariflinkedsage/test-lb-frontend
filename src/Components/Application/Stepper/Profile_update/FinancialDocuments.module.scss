@@ -1,0 +1,32 @@
+.container{
+  &_nameee{
+      padding: 0 30px; 
+      align-items: center;   
+    label{
+        margin-right: 20px;
+    }
+    // input{
+    //     width: 65%;
+    // }
+
+  }
+  &_uploadFiles{
+    margin: auto;
+    width: 90%;
+    background: #fff;
+    border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 30px 10px;
+  margin-bottom: 20px;
+  // display: flex;
+  // justify-content: start;
+  label{
+    width: 100% !important;
+  }
+  h5{
+    display: block;
+    float: left !important;
+  }
+  }
+
+}

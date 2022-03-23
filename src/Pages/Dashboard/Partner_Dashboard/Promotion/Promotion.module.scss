@@ -1,0 +1,96 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_card {
+    padding: 30px;
+    width: 90%;
+    // background-color: #769cbd;
+  }
+  &_select {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    &_bankSelection {
+      margin-right: 80px;
+      position: relative;
+      border-radius: 5px;
+      background-color: #ece24d;
+      color: #351818;
+      font-size: 20px;
+      height: 40px;
+      box-shadow: 2px 2px 20px rgb(0, 0, 0);
+      -webkit-perspective: 800px;
+      perspective: 800px;
+    }
+    &_cardSelection {
+      position: relative;
+      border-radius: 5px;
+      background-color: #ece24d;
+      color: #351818;
+      height: 40px;
+      font-size: 20px;
+      box-shadow: 2px 2px 15px rgb(0, 0, 0);
+      -webkit-perspective: 800px;
+      perspective: 800px;
+    }
+  }
+  &_btn_group {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    &_button {
+      align-items: center;
+      font-weight: bold;
+      color: #0c4271;
+      padding: 12px;
+      margin-top: 30px !important;
+      width: 200px;
+      background: #fdad24;
+      box-shadow: 2px 2px 20px rgb(0, 0, 0);
+      border-radius: px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+    }
+  }
+  &_cardPicture {
+    display: flex;
+    justify-content: center;
+  }
+  &_inputgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 15px;
+    margin-left: 10px;
+    &_input[type="text"] {
+      align-items: center;
+      width: 80%;
+      padding: 8px;
+      // margin-top: 2%;
+      border-radius: px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border: 1px solid #fdad24;
+    }
+
+    &_copybutton {
+      align-items: center;
+      font-weight: bold;
+      font-size: 15px;
+      color: #0c4271;
+      width: 80px;
+      height: 30px;
+      background: #fdad24;
+      // box-shadow: 2px 2px 20px rgb(0, 0, 0);
+      border-radius: px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+    }
+  }
+  &_linkCopyer {
+    margin-top: 15px;
+  }
+}
