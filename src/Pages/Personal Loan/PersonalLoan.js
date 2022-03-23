@@ -35,7 +35,11 @@ function PersonalLoan() {
             </button> */}
             {/* link to application process */}
             {/* to=
-            {`/application/${id}${
+            {`/${
+                  catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${
               companyReference ? `?reference=${companyReference}` : ``
             }`} */}
             <Link

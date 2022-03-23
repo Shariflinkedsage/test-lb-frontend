@@ -47,21 +47,21 @@ function getWindowDimensions() {
 }
 
 function LoanDetails() {
-  const location = useLocation()
+  const location = useLocation();
   const { id } = useParams();
-  console.log("LOANNNNNNNNNNNNN",id)
+  console.log("LOANNNNNNNNNNNNN", id);
   const [cardDetailsInfo, setCardDetailsInfo] = useState(null);
   const [companyReference, setCompanyReference] = useState();
   const screenWidth = useWindowWidth();
   const { reference } = useQuery();
-  const [preloaderVar, setPreloaderVar] = useState(false)
+  const [preloaderVar, setPreloaderVar] = useState(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     window.scroll(0, 0);
-    setPreloaderVar(true)
+    setPreloaderVar(true);
     const cardDetailsInfo = await cardService.getLoanDetailsById(id);
     //console.log("api call",cardDetailsInfo)
-    if (cardDetailsInfo) setPreloaderVar(false)
+    if (cardDetailsInfo) setPreloaderVar(false);
     setCardDetailsInfo(cardDetailsInfo);
     // //console.log("screen width", screenWidth);
     // setting and getting company reference id conditiinally
@@ -91,11 +91,7 @@ function LoanDetails() {
       id="page-content"
       style={{ marginTop: "60px" }}
     >
-      {
-        preloaderVar ?
-          <Preloader />
-          : null
-      }
+      {preloaderVar ? <Preloader /> : null}
       <div className="page-overlay"></div>
       {/* </div> */}
       <Container
@@ -138,36 +134,48 @@ function LoanDetails() {
             >
               Apply Now
             </button> */}
-            {
-              location.state && location.state.reqMinMonthlyIncome && location.state.clientSalary && location.state.reqMinMonthlyIncome > location.state.clientSalary ?
-                <Link
-                  to={{
-                    pathname: `/suggested-products`,
-                    state: {
-                      clientSalary: location.state.clientSalary,
-                      catagory: location.state.catagory,
-                    },
-                  }}
-                  className={cx("btn btn-ghost", style.Container_Apply__Button)}
-                >
-                  Apply Now
-                </Link>
-                :
-                <Link
-                  to={{
-                    pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
-                      }`,
-                    state: {
-                      reqMinMonthlyIncome: location.state && location.state.reqMinMonthlyIncome || cardDetailsInfo && cardDetailsInfo.cardEligibilityInfo && cardDetailsInfo.cardEligibilityInfo.minIncome,
-                      catagory: location.state && location.state.catagory || cardDetailsInfo && cardDetailsInfo.catagory,
-
-                    },
-                  }}
-                  className={cx("btn btn-ghost", style.Container_Apply__Button)}
-                >
-                  Apply Now
-                </Link>
-            }
+            {location.state &&
+            location.state.reqMinMonthlyIncome &&
+            location.state.clientSalary &&
+            location.state.reqMinMonthlyIncome > location.state.clientSalary ? (
+              <Link
+                to={{
+                  pathname: `/suggested-products`,
+                  state: {
+                    clientSalary: location.state.clientSalary,
+                    catagory: location.state.catagory,
+                  },
+                }}
+                className={cx("btn btn-ghost", style.Container_Apply__Button)}
+              >
+                Apply Now
+              </Link>
+            ) : (
+              <Link
+                to={{
+                  pathname: `/${
+                    location.state.catagory === "Home Loan"
+                      ? "home-loan-application"
+                      : "application"
+                  }/${id}${
+                    companyReference ? `?reference=${companyReference}` : ``
+                  }`,
+                  state: {
+                    reqMinMonthlyIncome:
+                      (location.state && location.state.reqMinMonthlyIncome) ||
+                      (cardDetailsInfo &&
+                        cardDetailsInfo.cardEligibilityInfo &&
+                        cardDetailsInfo.cardEligibilityInfo.minIncome),
+                    catagory:
+                      (location.state && location.state.catagory) ||
+                      (cardDetailsInfo && cardDetailsInfo.catagory),
+                  },
+                }}
+                className={cx("btn btn-ghost", style.Container_Apply__Button)}
+              >
+                Apply Now
+              </Link>
+            )}
           </div>
           {/* <h1 className="title">Amex Platinum</h1> */}
           {/* <p className="detail">gfcycfgyfc</p> */}
@@ -213,7 +221,11 @@ function LoanDetails() {
                             Interested to take this card? &nbsp;
                         </h5>
                         <Link
-                            to={`/application/${id}${companyReference ? `?reference=${companyReference}` : ``
+                            to={`/${
+                  catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${companyReference ? `?reference=${companyReference}` : ``
                                 }`}
                             className={cx("btn btn-ghost", style.Container_Apply__Button)}
                         >
@@ -252,8 +264,8 @@ function LoanDetails() {
                 <h5 class="card-title">Any purpose loan</h5>
                 <p class="card-text">
                   Be it your marriage expenditure, house or office renovation,
-                  vacations aboard or emergency medical needs – Our Personal Loan is there to help you meet all your
-                  financial needs.
+                  vacations aboard or emergency medical needs – Our Personal
+                  Loan is there to help you meet all your financial needs.
                 </p>
               </div>
             </div>
@@ -284,12 +296,11 @@ function LoanDetails() {
               <div class="card-body">
                 <h5 class="card-title">Easy repayment</h5>
                 <p class="card-text">
-                  You don’t have an account with Our Bank and thinking
-                  how to repay your loan? No need of Post-Dated Cheques and the
-                  hassle of collecting those. Just give us an instruction and we
-                  will collect the EMI from your account with other bank
-                  directly through Bangladesh Electronic Fund Transfer Network
-                  (BEFTN).
+                  You don’t have an account with Our Bank and thinking how to
+                  repay your loan? No need of Post-Dated Cheques and the hassle
+                  of collecting those. Just give us an instruction and we will
+                  collect the EMI from your account with other bank directly
+                  through Bangladesh Electronic Fund Transfer Network (BEFTN).
                 </p>
               </div>
             </div>
@@ -418,37 +429,48 @@ function LoanDetails() {
             <h5 className="title text-center mt-2 fs-3">
               Interested to take this card? &nbsp;
             </h5>
-            {
-              location.state && location.state.reqMinMonthlyIncome && location.state.clientSalary && location.state.reqMinMonthlyIncome > location.state.clientSalary ?
-                <Link
-                  to={{
-                    pathname: `/suggested-products`,
-                    state: {
-                      clientSalary: location.state.clientSalary,
-                      catagory: location.state.catagory,
-                    },
-                  }}
-                  className={cx("btn btn-ghost", style.Container_Apply__Button)}
-                >
-                  Apply Now
-                </Link>
-                :
-                <Link
-                  to={{
-                    pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
-                      }`,
-                    state: {
-
-
-                      reqMinMonthlyIncome: location.state && location.state.reqMinMonthlyIncome || cardDetailsInfo && cardDetailsInfo.cardEligibilityInfo && cardDetailsInfo.cardEligibilityInfo.minIncome,
-                      catagory: location.state && location.state.catagory || cardDetailsInfo && cardDetailsInfo.catagory,
-                    },
-                  }}
-                  className={cx("btn btn-ghost", style.Container_Apply__Button)}
-                >
-                  Apply Now
-                </Link>
-            }
+            {location.state &&
+            location.state.reqMinMonthlyIncome &&
+            location.state.clientSalary &&
+            location.state.reqMinMonthlyIncome > location.state.clientSalary ? (
+              <Link
+                to={{
+                  pathname: `/suggested-products`,
+                  state: {
+                    clientSalary: location.state.clientSalary,
+                    catagory: location.state.catagory,
+                  },
+                }}
+                className={cx("btn btn-ghost", style.Container_Apply__Button)}
+              >
+                Apply Now
+              </Link>
+            ) : (
+              <Link
+                to={{
+                  pathname: `/${
+                    location.state.catagory === "Home Loan"
+                      ? "home-loan-application"
+                      : "application"
+                  }/${id}${
+                    companyReference ? `?reference=${companyReference}` : ``
+                  }`,
+                  state: {
+                    reqMinMonthlyIncome:
+                      (location.state && location.state.reqMinMonthlyIncome) ||
+                      (cardDetailsInfo &&
+                        cardDetailsInfo.cardEligibilityInfo &&
+                        cardDetailsInfo.cardEligibilityInfo.minIncome),
+                    catagory:
+                      (location.state && location.state.catagory) ||
+                      (cardDetailsInfo && cardDetailsInfo.catagory),
+                  },
+                }}
+                className={cx("btn btn-ghost", style.Container_Apply__Button)}
+              >
+                Apply Now
+              </Link>
+            )}
           </div>
         </div>
       </div>

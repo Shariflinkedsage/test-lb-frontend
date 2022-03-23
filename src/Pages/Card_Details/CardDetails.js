@@ -127,7 +127,11 @@ function CardDetails() {
                 :
                 <Link
                   to={{
-                    pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
+                    pathname: `/${
+                      location.state.catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${companyReference ? `?reference=${companyReference}` : ``
                       }`,
                     state: {
                       reqMinMonthlyIncome: location.state && location.state.reqMinMonthlyIncome || cardDetailsInfo && cardDetailsInfo.cardEligibilityInfo && cardDetailsInfo.cardEligibilityInfo.minIncome,
@@ -212,7 +216,11 @@ function CardDetails() {
                 :
                 <Link
                   to={{
-                    pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
+                    pathname: `/${
+                      location.state.catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${companyReference ? `?reference=${companyReference}` : ``
                       }`,
                     state: {
                       reqMinMonthlyIncome: location.state && location.state.reqMinMonthlyIncome || cardDetailsInfo && cardDetailsInfo.cardEligibilityInfo && cardDetailsInfo.cardEligibilityInfo.minIncome,
