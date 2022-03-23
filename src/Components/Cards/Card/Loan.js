@@ -29,11 +29,9 @@ function Loan({
     let companyReference = await localStorage.getItem("reference");
     setCompanyReference(companyReference);
   });
-  const [userData, setUserData] = useState(0)
+  const [userData, setUserData] = useState(0);
   useEffect(() => {
-
-    if (authService.getCurrentUser())
-      setUserData(authService.getCurrentUser())
+    if (authService.getCurrentUser()) setUserData(authService.getCurrentUser());
   }, []);
 
   const handleClose = () => setShow(false);
@@ -108,8 +106,13 @@ function Loan({
             <div className="row m-2">
               <Link
                 to={{
-                  pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
-                    }`,
+                  pathname: `/${
+                    catagory === "Home Loan"
+                      ? "home-loan-application"
+                      : "application"
+                  }/${id}${
+                    companyReference ? `?reference=${companyReference}` : ``
+                  }`,
                   state: {
                     ...location.state,
                     reqMinMonthlyIncome: minMonthlyIncome,
@@ -130,7 +133,6 @@ function Loan({
                     catagory: catagory,
                   },
                 }}
-
                 className={style.container_details_button}
               >
                 Details
@@ -147,8 +149,13 @@ function Loan({
           <div>
             <Link
               to={{
-                pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
-                  }`,
+                pathname: `/${
+                  catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${
+                  companyReference ? `?reference=${companyReference}` : ``
+                }`,
                 state: {
                   ...location.state,
                   reqMinMonthlyIncome: minMonthlyIncome,

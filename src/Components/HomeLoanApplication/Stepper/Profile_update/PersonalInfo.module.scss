@@ -1,0 +1,33 @@
+.container{
+    &_nameee{
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        padding: 0 30px;
+      
+      label{
+          width: 25%;
+          margin-top: 12px;
+      }
+      input{
+          width: 65%;
+          pointer-events:none;
+          
+      }
+
+    }
+    &_write{
+      text-align: left;
+        display: flex;
+        justify-content: center;
+        padding: 0 30px;
+      
+      label{
+          width: 25%;
+          margin-top: 12px;
+      }
+      input{
+          width: 65%;
+      }
+    }
+  }

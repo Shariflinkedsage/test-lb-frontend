@@ -20,28 +20,24 @@ function Card({
 }) {
   const [showDetails, setshowDetails] = useState(false);
   const [companyReference, setCompanyReference] = useState();
-  const [userData, setUserData] = useState(0)
+  const [userData, setUserData] = useState(0);
   const location = useLocation();
 
   const [show, setShow] = useState(false);
   useEffect(async () => {
+    console.log("catagoryyyyyyyyyyyyyyy",catagory)
     let companyReference = await localStorage.getItem("reference");
     setCompanyReference(companyReference);
-    if(authService.getCurrentUser())
-      setUserData(authService.getCurrentUser())
-
+    if (authService.getCurrentUser()) setUserData(authService.getCurrentUser());
   }, []);
 
-  
   const handleClose = () => setShow(false);
-
 
   var subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
   }
-
 
   function createMarkup() {
     return { __html: details };
@@ -92,50 +88,57 @@ function Card({
               {
                 //console.log("ccccccccccc",userData)
               }
-              {
-                userData || userData == 0 || (userData && userData.salary && userData.salary>=minMonthlyIncome)?
+              {userData ||
+              userData == 0 ||
+              (userData &&
+                userData.salary &&
+                userData.salary >= minMonthlyIncome) ? (
                 <Link
-                to={{
-                  pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
+                  to={{
+                    pathname: `/${
+                      catagory === "Home Loan"
+                        ? "home-loan-application"
+                        : "application"
+                    }/${id}${
+                      companyReference ? `?reference=${companyReference}` : ``
                     }`,
+                    state: {
+                      ...location.state,
+                      reqMinMonthlyIncome: minMonthlyIncome,
+                      catagory: catagory,
+                    },
+                  }}
+                  className={cx(style.container_apply_button)}
+                >
+                  Apply Now
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    to={{
+                      pathname: `/suggested-products`,
+                      state: {
+                        clientSalary: userData.salary,
+                        catagory: catagory,
+                      },
+                    }}
+                    className={cx(style.container_apply_button)}
+                  >
+                    Apply Now
+                  </Link>
+                </>
+              )}
+
+              <Link
+                to={{
+                  pathname: `/credit-card/details/${id}`,
                   state: {
                     ...location.state,
+                    clientSalary: userData.salary,
                     reqMinMonthlyIncome: minMonthlyIncome,
                     catagory: catagory,
                   },
                 }}
-                className={cx(style.container_apply_button)}
-              >
-                Apply Now
-              </Link>
-              :
-              <>
-              <Link
-                to={{
-                  pathname: `/suggested-products`,
-                  state: {
-                    clientSalary:userData.salary,
-                    catagory: catagory,
-                  },
-                }}
-                className={cx(style.container_apply_button)}
-              >
-                Apply Now
-              </Link>
-              </>
-              }
-              
-              <Link
-              to={{
-                pathname: `/credit-card/details/${id}`,
-                state: {
-                  ...location.state,
-                  clientSalary:userData.salary,
-                  reqMinMonthlyIncome: minMonthlyIncome,
-                  catagory: catagory,
-                },
-              }}
-               
                 className={style.container_details_button}
               >
                 Details
@@ -152,8 +155,13 @@ function Card({
           <div>
             <Link
               to={{
-                pathname: `/application/${id}${companyReference ? `?reference=${companyReference}` : ``
-                  }`,
+                pathname: `/${
+                  catagory === "Home Loan"
+                    ? "home-loan-application"
+                    : "application"
+                }/${id}${
+                  companyReference ? `?reference=${companyReference}` : ``
+                }`,
                 state: {
                   ...location.state,
                   reqMinMonthlyIncome: minMonthlyIncome,
@@ -166,21 +174,20 @@ function Card({
             </Link>
           </div>
           <div>
-          <Link
+            <Link
               to={{
                 pathname: `/credit-card/details/${id}`,
                 state: {
                   ...location.state,
-                  clientSalary:userData.salary,
+                  clientSalary: userData.salary,
                   reqMinMonthlyIncome: minMonthlyIncome,
                   catagory: catagory,
                 },
               }}
-               
-                className={style.container_details_button}
-              >
-                Details
-              </Link>
+              className={style.container_details_button}
+            >
+              Details
+            </Link>
           </div>
         </div>
       </div>

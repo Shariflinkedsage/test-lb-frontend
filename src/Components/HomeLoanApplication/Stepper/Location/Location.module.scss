@@ -1,0 +1,25 @@
+.container {
+  &_lazyload {
+    width: 150px;
+    height: 150px;
+    // padding: 20px;
+    background-color: white;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:active {
+      // background-color: red;
+      // border: 1px solid;
+    }
+    &:hover {
+      // background-color: red;
+      //   color: white;
+      transform: scale(1.2);
+      border: 1px solid;
+    }
+    // &_image
+  }
+}

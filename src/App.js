@@ -12,6 +12,9 @@ import authService from "./Services/authService";
 const ApplicationComponent = React.lazy(() =>
   import("./Pages/Application/Application")
 );
+const HomeLoanApplicationComponent = React.lazy(() =>
+  import("./Pages/Application/HomeLoanApplicationComponent")
+);
 const CreditCardComponent = React.lazy(() =>
   import("./Pages/Credit_Card/Credit_Card")
 );
@@ -104,6 +107,11 @@ function App() {
           <Route path="/application/:cardId">
             <Suspense fallback={<CustomSpinner />}>
               <ApplicationComponent />
+            </Suspense>
+          </Route>
+          <Route path="/home-loan-application/:cardId">
+            <Suspense fallback={<CustomSpinner />}>
+              <HomeLoanApplicationComponent />
             </Suspense>
           </Route>
           <Route path="/signin">
